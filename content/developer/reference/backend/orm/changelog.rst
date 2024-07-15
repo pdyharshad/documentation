@@ -7,13 +7,14 @@ Changelog
 Odoo version 18.0
 =================
 
+- New `odoo.domain` and `odoo.Domain` API for domain manipulation.
+  See `#170009 <https://github.com/odoo/odoo/pull/170009>`_.
 - Searching by name is now implemented as `_search_display_name` like all other fields.
   See `#174967 <https://github.com/odoo/odoo/pull/174967>`_.
 - New methods to check access rights and rules now combine both access rights
   and rules: `check_access`, `has_access` and `_filtered_access`.
   See `#179148 <https://github.com/odoo/odoo/pull/179148>`_.
 - Translations are made available from the `Environment` with `#174844 <https://github.com/odoo/odoo/pull/174844>`_.
-
 
 Odoo Online version 17.4
 ========================
