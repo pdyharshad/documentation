@@ -567,3 +567,72 @@ goods (i.e :guilabel:`Opening Stock` + purchases during the period - :guilabel:`
 
    .. image:: india/profit-and-loss-report.png
       :alt: Profit and Loss report
+
+.. _india/tds-tcs-threshold:
+
+TDS/TCS Threshold alert
+=======================
+
+.. note::
+   If you want the system to advise you on when to apply TDS/TCS, simply configure the correct **TDS/TCS**
+   section in the Chart of Accounts. The system will then prompt you when recording a bill or invoice.
+
+Configuration
+-------------
+
+Navigate to **Accounting --> Configuration --> Settings --> Indian Integration --> TDS and TCS**.
+   .. image:: india/tds-tcs-settings.png
+      :alt: TDS/TCS Settings
+
+#. **How to configure TDS/TCS Section on COA?**
+
+.. tabs::
+
+   .. tab:: TDS
+
+      - Navigate to **Accounting --> Configuration --> Chart of Accounts**.
+         .. image:: india/tds-194c-coa.png
+            :alt: TDS 194C configuration with CoA
+         .. image:: india/tds-194J-coa.png
+            :alt: TDS 194J configuration with CoA
+
+      - Based on the COA used during the recording of the vendor bill, the TDS threshold limit will be checked.
+         .. image:: india/tds-coa-vendor-bill-config.png
+            :alt: configuration CoA with Vendor Bill
+
+      - At the time of Recording Vendor Bill, if limit specified in TDS Section configured in COA
+        exced then systen will advise you to apply TDS
+         .. image:: india/tds-alert.gif
+            :alt: TDS Alert
+
+      - As system advise to apply, to apply TDS Click on the **"TDS Entry"** button available on the Vendor Bill.
+        A popup window will appear where you can specify the TDS details and Confirm the entry to apply the TDS.
+         .. image:: india/tds-apply.gif
+            :alt: TDS Apply
+
+   .. tab:: TCS
+
+      - Navigate to **Accounting --> Configuration --> Chart of Accounts**.
+         .. image:: india/tcs-2061h-coa1.png
+            :alt: TCS 206(1H) configuration with CoA
+         .. image:: india/tcs-2061h-coa2.png
+            :alt: TCS 206(1H) configuration with CoA
+
+      - Based on the COA used during the recording of the Customer Invoice, the TCS threshold limit will be checked.
+         .. image:: india/tcs-coa-invoice-config.png
+            :alt: configuration CoA with Vendor Bill
+
+      - At the time of Recording Customer Invoice, if limit specified in TCS Section configured in COA
+        exced then systen will advise you to apply TCS
+         .. image:: india/tcs-alert.gif
+            :alt: TCS Alert
+
+      - As system advise to apply, to apply TCS you must apply the tax directly to the invoice lines
+         .. image:: india/tcs-apply.gif
+            :alt: TCS Apply
+
+.. note::
+   - In Odoo, the aggregate total is calculated for partners sharing the same PAN number, across all branches of the company.
+   - The TDS/TCS sections are pre-configured with threshold limits. If you need to modify these limits, follow the process below:
+      .. image:: india/tds-tcs-section-modifiy.gif
+            :alt: TDS/TCS section modify
